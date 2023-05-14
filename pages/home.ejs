@@ -1,0 +1,17 @@
+<%- include('../moduliejs/header.ejs') %>
+    <h1>HOME</h1>
+    <form calss="form" action="postIt" >
+      <button type="submit" class="btn btn-primary">POST IT</button>
+    </form>
+    <br>
+    <div class = "mainBox container">
+    <% for(var i=0; i<data.length; i++) {%>
+        <div class="card">
+            <h2 class="card-header"><%=data[i].nome%></h2>
+            <div class="card-body">
+              <p><%=data[i].messaggio%></p>
+            </div>
+          </div>
+     <% } %>
+</div>
+<%- include('../moduliejs/footer.ejs') %>
